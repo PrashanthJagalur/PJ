@@ -1,0 +1,22 @@
+.example-sidenav-content {
+  display: flex;
+  height: 10vh;
+ 
+}
+
+.example-sidenav {
+  background-color:rgb(211, 48, 72);
+}
+.active{
+  background-color:rgba(9, 30, 66, 0.25);
+}
+
+.sidenav-item{
+    color: white;
+    
+}
+
+mat-icon{
+  color: white;
+}
+

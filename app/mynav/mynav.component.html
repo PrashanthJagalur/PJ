@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<br/>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+     
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="height:20;">
+          <span class="sr-only" >Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="assets/logo1.jpg" height="80">
+      </div>
+  
+      
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+        
+        <ul class="nav navbar-nav navbar-right">
+            <li ><a href="/aboutus" style="color:rgb(211, 48, 72);font-family: cursive;font-size: 160%;">AboutUs</a></li>
+            <li ><a href="/contactus" style="color:rgb(211, 48, 72);font-family: cursive;font-size: 160%;">ContactUs</a></li>
+            <li ><a href="/login" style="color:rgb(211, 48, 72);font-family: cursive;font-size: 160%;">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side"  class="example-sidenav" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true" (mouseenter)="increase()"
+      (mouseleave)="decrease()">
+  
+      <mat-nav-list>
+  
+        <mat-list-item routerLink="/home" routerLinkActive="active" >
+          <mat-icon mat-list-icon>home</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home</h5>
+          </div>
+        </mat-list-item>
+  
+        <mat-list-item routerLink="2" routerLinkActive="active">
+          <mat-icon mat-list-icon>face</mat-icon>
+          <div fxFlex="10"></div>
+              <span fxShow.lt-md="false" fxShow.gt-sm="true">
+        
+        
+                  <button mat-button [matMenuTriggerFor]="dropDown" style="color:white">
+                   Parent
+                    <mat-icon class="ml-1">&nbsp;&nbsp;arrow_drop_down</mat-icon>
+                  </button>
+                  <mat-menu #dropDown="matMenu" overlapTrigger="false"  style="color:rgb(211, 48, 72);">
+                    <button mat-menu-item style="color:rgb(211, 48, 72);" >
+                      <a mat-list-item routerLink='/enquiry' color="accent">   <button mat-button style="color:rgb(211, 48, 72);">Enquiry</button> </a>
+                     
+                    </button>
+                    <button mat-menu-item>
+                        <a mat-list-item routerLink='/admission' color="accent">   <button mat-button style="color:rgb(211, 48, 72);">Admission</button> </a>
+                      
+                      
+                    </button>
+                  </mat-menu>
+                </span>
+          
+        </mat-list-item>
+  
+        <mat-list-item routerLink="/gallery" routerLinkActive="active">
+          <mat-icon mat-list-icon>collections</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gallery</h5>
+          </div>
+        </mat-list-item>
+        <mat-list-item routerLink="/franchise" routerLinkActive="active">
+          <mat-icon mat-list-icon>face</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Franchise</h5>
+          </div>
+        </mat-list-item>
+        <mat-list-item routerLink="/branches" routerLinkActive="active">
+          <mat-icon mat-list-icon>place</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Branches</h5>
+          </div>
+        </mat-list-item>
+        <mat-list-item routerLink="/programs" routerLinkActive="active">
+          <mat-icon mat-list-icon>link</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Programs</h5>
+          </div>
+        </mat-list-item>
+        <mat-list-item routerLink="/faqs" routerLinkActive="active">
+          <mat-icon mat-list-icon>info</mat-icon>
+          <div fxFlex="10"></div>
+          <div *ngIf="sidenavWidth > 6" class="sidenav-item">
+            <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FAQ's</h5>
+          </div>
+        </mat-list-item>
+      </mat-nav-list>
+  
+    </mat-sidenav>
+  
+    <div class="example-sidenav-content">
+      <router-outlet></router-outlet>
+    </div>
+  
+  
+  
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

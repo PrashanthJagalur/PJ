@@ -1,0 +1,130 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<br/><br/>
+  <div class="container">
+  
+      
+      <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()">
+          <div class="panel">
+              <div class="panel-heading text-center">
+                  <div class="panel-title">  <h3>Franchise Enquiry Form</h3>
+                 </div>
+                 </div>
+   <div class="panel-body">
+        <div class="form-group">
+      
+          <label for="name">Name</label>
+          <input type="text" class="form-control" formControlName="name" [ngClass]="{'is-invalid':submitted && f.name.errors}" >
+          <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required"> please enter the name</div>
+          </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid':submitted && f.email.errors}" >
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf="f.email.errors.required"> please enter the valid email</div>
+            </div>
+          </div>
+          <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" formControlName="address" [ngClass]="{'is-invalid':submitted && f.address.errors}" >
+              <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                <div *ngIf="f.address.errors.required"> enter the valid address</div>
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="postalcode">PostalCode</label>
+                <input type="number" class="form-control" formControlName="postalcode" [ngClass]="{'is-invalid':submitted && f.postalcode.errors}" >
+                <div *ngIf="submitted && f.postalcode.errors" class="invalid-feedback">
+                  <div *ngIf="f.postalcode.errors.required">this field is required</div>
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="text" class="form-control" formControlName="phone" [ngClass]="{'is-invalid':submitted && f.phone.errors}" >
+                  <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                    <div *ngIf="f.phone.errors.required"> enter the valid phoneNumber</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="nature">Nature Of Business</label>
+                    <input type="text" class="form-control" formControlName="nature" [ngClass]="{'is-invalid':submitted && f.nature.errors}" >
+                    <div *ngIf="submitted && f.nature.errors" class="invalid-feedback">
+                      <div *ngIf="f.nature.errors.required">this field is required</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="abc">How do you heard About Us?</label>
+                      <select  class="form-control" formControlName="abc" [ngClass]="{'is-invalid':submitted && f.abc.errors}" >
+                        <option>google/website</option>
+                        <option> newspaper</option>
+                        <option> Televison</option>
+                        <option>others</option>
+                        </select>
+                      <div *ngIf="submitted && f.abc.errors" class="invalid-feedback">
+                        <div *ngIf="f.abc.errors.required"> enter the valid address</div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sss">I Want to Start a franchisee center in</label>
+                        <input type="text" class="form-control" formControlName="sss" [ngClass]="{'is-invalid':submitted && f.sss.errors}" >
+                        <div *ngIf="submitted && f.sss.errors" class="invalid-feedback">
+                          <div *ngIf="f.sss.errors.required"> please enter the name</div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                          <label for="Area">I have an area of</label>
+                          <input type="text" class="form-control" formControlName="Area" [ngClass]="{'is-invalid':submitted && f.Area.errors}" >
+                          <div *ngIf="submitted && f.Area.errors" class="invalid-feedback">
+                            <div *ngIf="f.Area.errors.required"> this field is required</div>
+                          </div>
+                        </div><div class="form-group">
+                            <label for="investmin">I can invest Min</label>
+                            <input type="text" class="form-control" formControlName="investmin" [ngClass]="{'is-invalid':submitted && f.investmin.errors}" >
+                            <div *ngIf="submitted && f.investmin.errors" class="invalid-feedback">
+                              <div *ngIf="f.investmin.errors.required"> this field is required</div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                              <label for="investmax">I can invest Max</label>
+                              <input type="text" class="form-control" formControlName="investmax" [ngClass]="{'is-invalid':submitted && f.investmax.errors}" >
+                              <div *ngIf="submitted && f.investmax.errors" class="invalid-feedback">
+                                <div *ngIf="f.investmax.errors.required"> this field is required</div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Any previous experience in educational segment?</label>
+                               <br/>
+                          <label class="radio-inline">
+                            <input type="radio" value="Yes" name="gender"  [ngClass]="gender">
+                            yes
+                          </label>
+                          <label class="radio-inline">
+                            <input type="radio" value="NO" name="gender" [ngClass]="gender">
+                            NO
+                          </label>
+                                   
+                              </div>
+                              <div class="form-group">
+                                  <label for="zzz">If yes,please Provide details</label>
+                                  <input type="text" class="form-control" formControlName="zzz" [ngClass]="{'is-invalid':submitted && f.zzz.errors}" >
+                                  <div *ngIf="submitted && f.zzz.errors" class="invalid-feedback">
+                                    <div *ngIf="f.zzz.errors.required"> enter the valid phoneNumber</div>
+                                  </div>
+                                </div> 
+                                <div class="form-group">
+                                    <label for="yyy">Why does taking up a franchisee of preschool excite you?</label>
+                                    <input type="text" class="form-control" formControlName="yyy" [ngClass]="{'is-invalid':submitted && f.yyy.errors}" >
+                                    <div *ngIf="submitted && f.yyy.errors" class="invalid-feedback">
+                                      <div *ngIf="f.yyy.errors.required"> enter the valid phoneNumber</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row text-center">
+                                      <button class="btn btn-primary"  type="Submit"  (click)="submitForm()">Submit</button><br>
+                                  </div>
+                                </div>           
+                        </form>
+                        </div>
+                      
+                        

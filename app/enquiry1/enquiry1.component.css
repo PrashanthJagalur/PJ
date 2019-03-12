@@ -1,0 +1,10 @@
+.container{
+    width: 50%;
+}
+    .panel{
+        height:20%;
+        border:3px solid rgb(209, 71, 94);
+        width:90%;
+    }
+    
+    

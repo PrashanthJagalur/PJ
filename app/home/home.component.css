@@ -1,0 +1,51 @@
+
+.carousel-inner img {
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(50%); 
+  width: 100%; 
+  margin: auto;
+  position: relative;
+}
+.carousel-caption h3 {
+  color: #fff !important;
+}
+@media (max-width: 644px) {
+.carousel-caption {
+  display: none;
+}
+}
+.h1{
+text-align: center;
+}
+.under
+{
+    position:absolute;
+    left:60px;
+    top:0px;
+    z-index:-1;
+}
+
+.over
+{
+    position:absolute;
+    right:50px;
+    top:0px;
+    
+    z-index:-1;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  
+
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  
+}
+

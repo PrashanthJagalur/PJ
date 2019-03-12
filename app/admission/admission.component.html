@@ -1,0 +1,160 @@
+<br/>
+<mat-toolbar  style="width:60%;font-family: cursive;background-color:rgb(211, 48, 72);color:white;">    
+    <span>Admission Form</span>    
+    <span class="demo-toolbar"></span>    
+    <a  routerLink='/home' style="color:white;"><button mat-button color="white">Home <mat-icon>home</mat-icon></button></a>
+    
+  </mat-toolbar>    
+    <div class="row">
+        <div class="col-sm-9">
+  <mat-card style="height:150%;width:90%;">    
+    <!-- Title of an Card -->    
+    <mat-card-title style="font-family: cursive;">    
+          <img src="/assets/a3.jpg" height="150" width="210">  Welcome to Admission Form 
+    </mat-card-title> 
+    
+    <mat-card-content >    
+        <form>    
+            <table> 
+                <tr>    
+                    <td colspan="2">    
+                        <span style="color:rgb(211, 48, 72);font-family: cursive;">Admission Seeking in:</span><br><br>    
+                        <mat-radio-group style="font-family: cursive;">     
+                            <mat-radio-button value="1" style="font-family: cursive;">Play Group</mat-radio-button>    
+                          &nbsp;&nbsp; &nbsp;   <mat-radio-button value="2" style="font-family: cursive;">Nursery</mat-radio-button>    
+                          &nbsp;&nbsp; &nbsp;   <mat-radio-button value="3" style="font-family: cursive;">LKG</mat-radio-button> 
+                          &nbsp;&nbsp; &nbsp;  <mat-radio-button value="4" style="font-family: cursive;">UKG</mat-radio-button> 
+                        </mat-radio-group>    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    </td>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  <td colspan="2">
+                      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;             <span style="color:rgb(211, 48, 72);font-family: cursive;">Passport Size Photo</span><br><br>
+                   
+                       &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                         <img [src]="imgURL" width="140px" height="160px" *ngIf="imgURL">
+                         <input #file type="file" accept='image/*' (change)="preview(file.files)" >
+  
+  
+                  </td>   </tr>   
+                <tr>    
+                  <td colspan="2">
+                        <mat-form-field style="font-family: cursive;" >    
+                            <input matInput placeholder="First Name"required>    
+                        </mat-form-field>    
+                    </td>    
+                    <td colspan="2">   
+                        <mat-form-field style="font-family: cursive;">    
+                            <input matInput placeholder="Last Name" required>    
+                        </mat-form-field>    
+                    </td>    
+                </tr> 
+                <tr>    
+                  <td colspan="2">
+                        <span style="font-family: cursive;" required>Gender</span><br><br>    
+                        <mat-radio-group >    
+                            <mat-radio-button value="1" style="font-family: cursive;">Male</mat-radio-button>    
+                         &nbsp;   <mat-radio-button value="2" style="font-family: cursive;">Female</mat-radio-button>    
+                        </mat-radio-group>    
+                    </td>    
+                    
+  
+                    <td colspan="2">
+                            <mat-form-field style="font-family: cursive;" >    
+                                <input matInput type="number" placeholder="Age" required>    
+                            </mat-form-field>    
+                        </td>    
+  
+                    </tr> <br/>
+                    <tr>    
+                        <td colspan="2">    
+                            <mat-form-field >    
+                                <input matInput [matDatepicker]="picker"  style="font-family: cursive;" placeholder="Date of birth" required>    
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>    
+                                <mat-datepicker touchUi="true" #picker></mat-datepicker>    
+                            </mat-form-field>    
+                        </td>    
+                    </tr> 
+                    <tr>    
+                      <td colspan="2">
+                            <mat-form-field style="font-family: cursive;width:150%;"  >    
+                                <input matInput placeholder="Parent Name" required>    
+                            </mat-form-field>    
+                        </td>    </tr>  
+                        <tr>    
+                          <td colspan="2">   
+                              <mat-form-field  style="font-family: cursive;">    
+                                  <input matInput placeholder="Phone Number" maxlength="10" required>    
+                              </mat-form-field>    
+                          </td>      
+                           
+                             
+                          <td colspan="2">
+                              <mat-form-field  style="font-family: cursive;">    
+                                  <input matInput placeholder="Email" >    
+                              </mat-form-field>    
+                          </td>      
+                          </tr>         
+                <tr>    
+                    <td colspan="2">    
+                        <mat-form-field class="demo-full-width" style="font-family: cursive;">    
+                            <textarea matInput placeholder="Residential Address" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" required></textarea>    
+                        </mat-form-field>    
+                    </td>    
+                </tr>    
+                <tr>    
+                  <td colspan="2"> 
+                        <mat-form-field style="font-family: cursive;" >    
+                            <input matInput placeholder="City">    
+                        </mat-form-field>    
+                    </td>    
+                    <td colspan="2">   
+                        <mat-form-field style="font-family: cursive;">    
+                            <input matInput placeholder="Pincode">    
+                        </mat-form-field>    
+                    </td>    
+                </tr> 
+                <tr>    
+                  <td colspan="2">   
+                        <mat-form-field style="font-family: cursive;" >    
+                            <input matInput placeholder="State">    
+                        </mat-form-field>    
+                    </td>    
+                    <td colspan="2">   
+                        <mat-form-field style="font-family: cursive;">    
+                            <input matInput placeholder="Country">    
+                        </mat-form-field>    
+                    </td>    
+                </tr> 
+                
+                <tr>    
+                    <td colspan="2" class="content-center">    
+                      &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button mat-raised-button  style="font-family: cursive;background-color:rgb(211, 48, 72);color:white;">Submit</button>    
+                      
+                    </td>    
+                </tr>    
+            </table>    
+        </form>    
+    </mat-card-content>    
+  </mat-card>  
+</div>
+<div class="col-sm-3">
+  <div class="container">
+  <div class="alert alert-info alert-dismissible fade in">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close" height="300" width="200">&times;</a>
+    <strong>Admissions are Open!!!</strong>
+                
+     <img src="/assets/10.jpg" height="300" width="200">   
+          
+    </div>
+  </div><br/><br/>
+  <div class="container">
+        <div class="alert alert-danger alert-dismissible fade in">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <strong>Admissions are Open!!!</strong>
+                      
+           <img src="/assets/4.jpg" height="400" width="200">   
+                
+          </div>
+        </div>
+</div>
+</div>

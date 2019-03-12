@@ -1,0 +1,30 @@
+
+
+<mat-card>
+    <div class="alert alert-danger alert-dismissible">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        </div>
+
+    
+    <mat-form-field>
+        <!--mat-icon>border</mat-icon-->
+        <input  matInput  placeholder="fullname" [(ngModel)]="fullname"  type="fullname" name="fullname"  required>
+    </mat-form-field>
+        <br>
+        <mat-form-field>
+            <!--mat-icon>perm_phone_msg</mat-icon-->
+        <input  matInput  placeholder="phoneno" [(ngModel)]="phoneno"  type="phoneno"  name="phoneno"  required>
+    </mat-form-field><br>
+  <mat-form-field>
+      <!--mat-icon>email</mat-icon-->
+    <input  matInput  placeholder="email" [(ngModel)]="email"  type="email" name="email"  required>    
+</mat-form-field>
+    <br>
+    <mat-form-field>
+        <!--mat-icon>lock</mat-icon-->
+    <input  matInput  placeholder="password" [(ngModel)]="password"  type="password"  name="password"  required> 
+</mat-form-field>
+  <mat-card-actions>
+    <button  mat-raised-button (click)="login()"  color="">register</button>
+    <a href="#clear"> cancel</a>
+  </mat-card-actions>
+  </mat-card>

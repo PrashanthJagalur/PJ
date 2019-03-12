@@ -1,0 +1,12 @@
+.mat-card{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+background:linear-gradient(to bottom right, rgb(231, 38, 70),#B05574);
+opacity:1.5;
+}
+.mat-form-field{
+    font-family:'Times New Roman', Times, serif;
+    color:white;
+}
